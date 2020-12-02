@@ -1,3 +1,8 @@
+"""
+We are using python3
+"""
+
+
 def shuffle(x):
     if x < 100:
         return x
