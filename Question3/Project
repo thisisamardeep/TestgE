@@ -9,7 +9,7 @@ Any application which was to communicate with this application can talk via the 
 It is reactive Node.js  based backend application.
 Every message is assumed to be a stream.
 Core component is a effect which is a stream of events.
-Internally we us RX observable.
+Internally we use RX observable.
 
 https://rxjs-dev.firebaseapp.com/guide/overview
 
