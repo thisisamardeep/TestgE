@@ -1,0 +1,7 @@
+//We assume sql server not Oracle
+
+select ponds.id as 'pond_id' ,count(ducks.name) as 'happy_ducks' from ponds
+left outer join ducks on ducks.pond_id = ponds.id
+full outer join species on ducks.species_id = species.id
+where (((ponds.temperature >= species.temp_limit  and species.temp_preferences = '+') or (ponds.temperature <= species.temp_limit and species.temp_preferences = '-')) or (ducks.id is NULL))
+group by ponds.id

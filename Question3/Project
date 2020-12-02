@@ -1,0 +1,50 @@
+Cost 2 Million USD
+Team size --> 8
+
+
+
+
+We developed a backend application using nodejs,rxjs and python in backend .Was implemented Bank vide and  replaced 14 legacy systems.
+Any application which was to communicate with this application can talk via the message bus.
+It is reactive Node.js  based backend application.
+Every message is assumed to be a stream.
+Core component is a effect which is a stream of events.
+Internally we us RX observable.
+
+https://rxjs-dev.firebaseapp.com/guide/overview
+
+It can communicate over various protocols HTTP,WebSocket,micro services,CQRS.
+
+CQRS
+https://martinfowler.com/bliki/CQRS.html#:~:text=CQRS%20stands%20for%20Command%20Query,you%20use%20to%20read%20information.
+
+
+There is seperation of read and write documents.
+We have different components like middleware,logger,routing,context,output,validation,server events.
+
+
+Middlewares --> middlewares are streams of side-effects that can be composed and plugged-in to our request/event lifecycle to perform certain actions before reaching the designated Effect.
+
+Effect -->Function that returns a stream of events
+
+Routing -->Routing determines how an application responds to a client request to a particular endpoint, which is a path and a specific HTTP method (eg. GET, POST).
+
+Output -->Listener factory which  allows you to intercept outgoing messages via dedicated output$ handler.
+
+Context-->Dependency Injection is done via functional programming.We can provide different implementations of those dependencies by using extension (polymorphism), interface implementation
+
+middleware-body --> Body parser middleware
+
+middleware-jwt --> JWT authorization middleware
+
+middleware-multipart --> Multipart middleware
+
+websockets --> websockets client/server api
+
+
+
+
+
+
+
+
